@@ -52,9 +52,9 @@ POST /users/login
 
 ### Exemplo de resposta:
 200:OK
-	{
-		"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkcmlhbm9ub2JyZWdhMjZAZ21haWwuY29tIiwiaWF0IjoxNjYzNjE4Mzg0LCJleHAiOjE2NjM3MDQ3ODR9.ZQ78GMpe2a9HPRNEhwnRE5MQGid-cv0bo8CljOtMOBA"
-	}
+		{
+			"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkcmlhbm9ub2JyZWdhMjasdsdsdasdsaddsFsdsSFDFF"
+		}
 #####passar e-mail ou senha incorretos.
 400:Bad Request
 	{
