@@ -93,7 +93,7 @@ GET /users
 
 ## LISTAR USUARIO ESPECIFICO.
 
-GET /users/:id
+GET /users/:id <br>
 OBS: id do usuario cadastrado.
 
 200:OK
