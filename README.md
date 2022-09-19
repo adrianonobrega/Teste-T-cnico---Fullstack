@@ -71,21 +71,22 @@ GET /users
 
 ### Exemplo de resposta:
 200:OK
-	[
-		{
-			"id": "77f11266-9813-4ce2-ba98-efec7815766c",
-			"name": "Adriano Nóbrega",
-			"email": "adrianonosbregsa26@gmail.com",
-			"phone": "83 996408016",
-			"created_at": "2022-09-19T20:39:23.148Z",
-			"updated_at": "2022-09-19T20:39:23.148Z"
-		},
-		{
-			"id": "746acb8b-6d13-4eb7-9e0c-233d134fa698",
-			"name": "Adriano Nóbrega",
-			"email": "adrianonobrega26@gmail.com",
-			"phone": "83 996408016",
-			"created_at": "2022-09-19T20:39:38.760Z",
-			"updated_at": "2022-09-19T20:39:38.760Z"
-		}
-	]
+		[
+			{
+				"id": "77f11266-9813-4ce2-ba98-efec7815766c",
+				"name": "Adriano Nóbrega",
+				"email": "adrianonosbregsa26@gmail.com",
+				"phone": "83 996408016",
+				"created_at": "2022-09-19T20:39:23.148Z",
+				"updated_at": "2022-09-19T20:39:23.148Z"
+			},
+			{
+				"id": "746acb8b-6d13-4eb7-9e0c-233d134fa698",
+				"name": "Adriano Nóbrega",
+				"email": "adrianonobrega26@gmail.com",
+				"phone": "83 996408016",
+				"created_at": "2022-09-19T20:39:38.760Z",
+				"updated_at": "2022-09-19T20:39:38.760Z"
+			}
+		]
+		
