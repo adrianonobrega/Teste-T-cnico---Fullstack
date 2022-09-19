@@ -9,3 +9,9 @@ export interface creUser extends createUser{
     create_at:Date
     update_at:Date
 }
+
+export interface updateUser{
+    id:string
+    email:string
+    phone:string
+}
