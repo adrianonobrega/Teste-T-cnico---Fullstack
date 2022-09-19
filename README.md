@@ -90,4 +90,21 @@ GET /users
 				"updated_at": "2022-09-19T20:39:38.760Z"
 			}
 		]
-		
+
+## LISTAR USUARIO ESPECIFICO.
+
+GET /users/:id
+OBS: id do usuario cadastrado.
+
+200:OK
+
+	{
+		"id": "77f11266-9813-4ce2-ba98-efec7815766c",
+		"name": "Adriano Nóbrega",
+		"email": "adrianonosbregsa26@gmail.com",
+		"password": "$2b$10$r328ZLIFkkMs/7uevG9HluDYv4d.yjZhJWfWFaBtx3ZEs88Rp7Z5K",
+		"phone": "83 996408016",
+		"created_at": "2022-09-19T20:39:23.148Z",
+		"updated_at": "2022-09-19T20:39:23.148Z"
+	}
+
