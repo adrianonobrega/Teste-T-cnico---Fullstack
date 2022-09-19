@@ -2,6 +2,7 @@ import { User } from "../entities/user.entity"
 
 export interface createContact{
     id:string
+    name:string
     email: string
     phone: string
     
