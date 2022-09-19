@@ -54,9 +54,11 @@ POST /users/login
 
 ### Exemplo de resposta:
 200:OK
+
 		{
 			"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkcmlhbm9ub2JyZWdhMjasdsdsdasdsaddsFsdsSFDFF"
 		}
+		
 passar e-mail ou senha incorretos.
 400:Bad Request
 
