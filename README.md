@@ -91,7 +91,7 @@ GET /users
 			}
 		]
 
-## LISTAR USUARIO ESPECIFICO.
+## LISTAR O USUARIO ESPECIFICO.
 
 GET /users/:id <br>
 OBS: id do usuario cadastrado.
@@ -102,9 +102,32 @@ OBS: id do usuario cadastrado.
 		"id": "77f11266-9813-4ce2-ba98-efec7815766c",
 		"name": "Adriano Nóbrega",
 		"email": "adrianonosbregsa26@gmail.com",
-		"password": "$2b$10$r328ZLIFkkMs/7uevG9HluDYv4d.yjZhJWfWFaBtx3ZEs88Rp7Z5K",
 		"phone": "83 996408016",
 		"created_at": "2022-09-19T20:39:23.148Z",
 		"updated_at": "2022-09-19T20:39:23.148Z"
 	}
 
+passar o id incorreto
+400:Bad Request
+
+	{
+		"message": "User not found"
+	}
+## ATUALIZAR O USUARIO ESPECIFICO.
+POST /users/:id <br>
+OBS: id do usuario cadastrado.
+
+200:OK
+
+	{
+		"email":"adriano@gmail.com",
+		"phone":"83 996408020",
+		"password":"12345"
+	}
+	
+passar o id incorreto
+400:Bad Request
+
+	{
+		"message": "User not found"
+	}
