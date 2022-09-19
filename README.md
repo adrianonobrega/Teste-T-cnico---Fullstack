@@ -71,6 +71,7 @@ GET /users
 
 ### Exemplo de resposta:
 200:OK
+
 		[
 			{
 				"id": "77f11266-9813-4ce2-ba98-efec7815766c",
