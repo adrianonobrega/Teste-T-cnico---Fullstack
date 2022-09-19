@@ -25,11 +25,11 @@ POST /users
 
 ### Exemplo de resposta:
 201:Created
-	{
-		"name": "Adriano Nóbrega",
-		"email": "adrianonobregsa26@gmail.com",
-		"phone": "83 996408016"
-	}
+		{
+			"name": "Adriano Nóbrega",
+			"email": "adrianonobregsa26@gmail.com",
+			"phone": "83 996408016"
+		}
 #####passar e-mail que ja existe.
 400:Bad Request
 	{
