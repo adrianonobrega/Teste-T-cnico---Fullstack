@@ -2,13 +2,11 @@
 
 
 # Objetivo do projeto
-  Criar um cadastro de clientes que poderá conter muitos contatos associados.Depois deste processo deverá ter um relatório em tela, ou PDF que mostre os clientes e os contatos vinculados a este cliente.
-Um cliente poderá ter mais de um contato vinculado a ele;
-
+  Criar um cadastro de clientes que poderá conter muitos contatos associados.
 
 # ROTAS NÃO AUTENTICADAS
 
-## CADASTRO DE USUARIO
+## CADASTRO DE USUARIO.
 
 POST /users
 
@@ -37,7 +35,7 @@ POST /users
 	}
 
 
-## LOGIN DE USUARIO
+## LOGIN DE USUARIO.
 
 
 POST /users/login
@@ -65,7 +63,7 @@ passar e-mail ou senha incorretos.
 
 # ROTAS AUTENTICADAS
 
-## LISTAR TODOS OS USUARIOS
+## LISTAR TODOS OS USUARIOS.
 
 GET /users
 
@@ -96,6 +94,7 @@ GET /users
 GET /users/:id <br>
 OBS: id do usuario cadastrado.
 
+### Exemplo de resposta:
 200:OK
 
 	{
@@ -107,7 +106,7 @@ OBS: id do usuario cadastrado.
 		"updated_at": "2022-09-19T20:39:23.148Z"
 	}
 
-passar o id incorreto
+passar o id incorreto <br>
 400:Bad Request
 
 	{
@@ -117,15 +116,36 @@ passar o id incorreto
 POST /users/:id <br>
 OBS: id do usuario cadastrado.
 
-200:OK
+### Exemplo de requisição:
 
 	{
 		"email":"adriano@gmail.com",
 		"phone":"83 996408020",
 		"password":"12345"
 	}
+
+### Exemplo de resposta:
+200:OK
+
+	{
+		"email": "adriano@gmail.com",
+		"phone": "83 996408020",
+	}
 	
-passar o id incorreto
+passar o id incorreto <br>
+400:Bad Request
+
+	{
+		"message": "User not found"
+	}
+
+## DELETAR O USUARIO ESPECIFICO.
+POST /users/:id <br>
+OBS: id do usuario cadastrado.
+
+200:OK
+	
+passar o id incorreto <br>
 400:Bad Request
 
 	{
