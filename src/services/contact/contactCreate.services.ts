@@ -32,6 +32,7 @@ export const contactCreateServices = async ({id,email,phone,name}: createContact
     
       const contact = new Contact()
       contact.user = user
+      contact.name = name
       contact.email = email
       contact.phone = phone
       contactRepository.save(contact)
