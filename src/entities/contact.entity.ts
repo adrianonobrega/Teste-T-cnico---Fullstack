@@ -18,7 +18,7 @@ export class Contact{
     @UpdateDateColumn()
     updated_at: Date
 
-    @ManyToOne(() => User, user => user.contact,{onDelete:'CASCADE'})
+    @ManyToOne(() => User, user => user.contact,{eager: true})
     user: User
-    contact: Contact;
+  
 }

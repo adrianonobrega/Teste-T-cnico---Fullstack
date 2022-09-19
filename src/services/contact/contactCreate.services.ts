@@ -14,11 +14,9 @@ export const contactCreateServices = async ({id,email,phone}: createContact) => 
         }
     })
 
-    
-
-    const users = await userRepository.find()
-    const alreadyExistsEmail = users.find((user) => user.email === email)
-    const phoneExistsEmail = users.find((user) => user.phone === phone)
+    const contacts = await contactRepository.find()
+    const alreadyExistsEmail = contacts.find((contact) => contact.email === email)
+    const phoneExistsEmail = contacts.find((contact) => contact.phone === phone)
 
     if(!user){
         throw new Error("user already exists")

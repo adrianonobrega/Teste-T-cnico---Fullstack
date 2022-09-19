@@ -7,9 +7,5 @@ export const contactListService = async () => {
 
     const contact = contactRepository.find()
 
-    if(!contact){
-        throw new Error("Email already exists")
-      }
-
     return contact
 }
