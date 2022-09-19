@@ -4,15 +4,16 @@ import {userListService} from "../services/user/userList.services"
 import { userOneListService } from "../services/user/userOneList.services"
 import { userUpdateService } from "../services/user/userUpdate.services"
 import { userDeleteService } from "../services/user/userDelete.services"
+import { userLoginServices } from "../services/user/userLogin.services"
 
 const userCreateController = async (req: Request, res: Response) => {
     
     try{
    
            
-           const {name, email,phone} = req.body
+           const {name, email,phone,password} = req.body
        
-       const newUser = await userCreateServices({name, email,phone})
+       const newUser = await userCreateServices({name, email,phone,password})
    
        res.status(201).json(newUser)
        }
@@ -67,9 +68,9 @@ const userCreateController = async (req: Request, res: Response) => {
        try{
       
             const {id} = req.params  
-            const {email,phone} = req.body
+            const {email,phone,password} = req.body
           
-          const newUser = await userUpdateService({id,email,phone})
+          const newUser = await userUpdateService({id,email,phone,password})
       
           res.status(201).json(newUser)
           }
@@ -100,6 +101,27 @@ const userCreateController = async (req: Request, res: Response) => {
             }
         }
     }
+
+    const userLoginController = async (req: Request, res: Response) => {
+    
+        try{
+       
+              
+               const {email,password} = req.body
+           
+           const contact = await userLoginServices({email,password})
+       
+           res.status(201).json(contact)
+           }
+       
+        catch(error){
+           if(error instanceof Error){
+               return res.status(400).json({
+                   message: error.message
+                   })
+               }
+           }
+       }
    
    
-   export {userCreateController,userListController,userListOneController,userUpdateController,userDeleteController}
+   export {userCreateController,userListController,userListOneController,userUpdateController,userDeleteController,userLoginController}

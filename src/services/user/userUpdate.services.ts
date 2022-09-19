@@ -2,7 +2,7 @@ import { AppDataSource } from "../../database"
 import { User } from "../../entities/user.entity"
 import { updateUser } from "../../interfaces/user"
 
-export const userUpdateService = async ({id,email,phone}: updateUser) => {
+export const userUpdateService = async ({id,email,phone,password}: updateUser) => {
 
     const userRepository = AppDataSource.getRepository(User) 
 
@@ -20,6 +20,7 @@ export const userUpdateService = async ({id,email,phone}: updateUser) => {
     user.id = user.id
     user.email = email || user.email
     user.phone = phone || user.phone
+    user.password = password || user.password
    
     await userRepository.createQueryBuilder().update(user).set(user).where("id = :id", {id: id}).execute()
 
