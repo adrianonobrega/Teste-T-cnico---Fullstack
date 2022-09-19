@@ -20,4 +20,5 @@ export class Contact{
 
     @ManyToOne(() => User, user => user.contact,{onDelete:'CASCADE'})
     user: User
+    contact: Contact;
 }

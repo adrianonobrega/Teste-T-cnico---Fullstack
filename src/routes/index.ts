@@ -5,4 +5,4 @@ import { contactRoutes } from "./contact";
 
 export const router = Router()
 router.use("/users",userRoutes)
-router.use("contacts",contactRoutes)
+router.use("/contacts",contactRoutes)
