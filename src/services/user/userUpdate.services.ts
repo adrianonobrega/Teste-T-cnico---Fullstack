@@ -1,6 +1,6 @@
-import { AppDataSource } from "../database"
-import { User } from "../entities/user.entity"
-import { updateUser } from "../interfaces/user"
+import { AppDataSource } from "../../database"
+import { User } from "../../entities/user.entity"
+import { updateUser } from "../../interfaces/user"
 
 export const userUpdateService = async ({id,email,phone}: updateUser) => {
 

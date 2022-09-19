@@ -1,5 +1,5 @@
-import { AppDataSource } from "../database"
-import { User } from "../entities/user.entity"
+import { AppDataSource } from "../../database"
+import { User } from "../../entities/user.entity"
 
 export const userOneListService = async (id:string) => {
 

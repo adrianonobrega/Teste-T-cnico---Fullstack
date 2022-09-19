@@ -1,6 +1,6 @@
-import { createUser } from "../interfaces/user";
-import { AppDataSource } from "../database";
-import { User } from "../entities/user.entity";
+import { createUser } from "../../interfaces/user";
+import { AppDataSource } from "../../database";
+import { User } from "../../entities/user.entity";
 
 export const userCreateServices = async ({name, email,phone}: createUser) => {
 

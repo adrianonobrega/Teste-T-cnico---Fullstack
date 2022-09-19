@@ -22,7 +22,7 @@ export class User{
     @UpdateDateColumn()
     updated_at: Date
 
-    @OneToMany(() => Contact, contact => contact.user)
+    @OneToMany(() => Contact, contact => contact.user,{onDelete:'CASCADE'})
     contact: Contact[]
 
 }
