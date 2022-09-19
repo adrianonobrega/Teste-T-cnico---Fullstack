@@ -19,7 +19,8 @@ export const userCreateServices = async ({name, email,phone}: createUser) => {
     user.name = name
     user.email = email
     user.phone = phone
+    user.created_at = user.created_at
     userRepository.save(user)
 
-    return user
+    return user.created_at
 }
