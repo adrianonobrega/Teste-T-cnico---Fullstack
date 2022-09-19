@@ -10,9 +10,9 @@ const contactCreateController = async (req: Request, res: Response) => {
     try{
    
            const {id} = req.params
-           const {email,phone} = req.body
+           const {email,phone,name} = req.body
        
-       const contact = await contactCreateServices({id,email,phone})
+       const contact = await contactCreateServices({id,email,phone,name})
    
        res.status(201).json(contact)
        }
@@ -67,9 +67,9 @@ const contactCreateController = async (req: Request, res: Response) => {
        try{
       
             const {id} = req.params  
-            const {email,phone} = req.body
+            const {email,phone,name} = req.body
           
-          const contact = await contactUpdateService({id,email,phone})
+          const contact = await contactUpdateService({id,email,phone,name})
       
           res.status(201).json(contact)
           }
@@ -100,6 +100,8 @@ const contactCreateController = async (req: Request, res: Response) => {
             }
         }
     }
+
+    
    
    
    export {contactCreateController,contactListController,contactListOneController,contactUpdateController,contactDeleteController}

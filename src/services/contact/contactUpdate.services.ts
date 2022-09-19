@@ -3,7 +3,7 @@ import { User } from "../../entities/user.entity"
 import { createContact } from "../../interfaces/contact"
 import { Contact } from "../../entities/contact.entity"
 
-export const contactUpdateService = async ({id,email,phone}: createContact) => {
+export const contactUpdateService = async ({id,email,phone,name}: createContact) => {
 
     const contactRepository = AppDataSource.getRepository(Contact) 
 
@@ -21,6 +21,7 @@ export const contactUpdateService = async ({id,email,phone}: createContact) => {
     contact.id = contact.id
     contact.email = email || contact.email
     contact.phone = phone || contact.phone
+    contact.name = name || contact.name
    
     await contactRepository.createQueryBuilder().update(contact).set(contact).where("id = :id", {id: id}).execute()
 

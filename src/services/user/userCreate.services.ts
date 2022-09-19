@@ -1,8 +1,9 @@
 import { createUser } from "../../interfaces/user";
 import { AppDataSource } from "../../database";
 import { User } from "../../entities/user.entity";
+import bcrypt from "bcrypt"
 
-export const userCreateServices = async ({name, email,phone}: createUser) => {
+export const userCreateServices = async ({name, email,phone,password}: createUser) => {
 
     const userRepository = AppDataSource.getRepository(User) 
     
@@ -19,6 +20,7 @@ export const userCreateServices = async ({name, email,phone}: createUser) => {
     user.name = name
     user.email = email
     user.phone = phone
+    user.password = bcrypt.hashSync(password,10)
     user.created_at = user.created_at
     userRepository.save(user)
 
