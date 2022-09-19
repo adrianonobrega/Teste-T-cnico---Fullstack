@@ -57,8 +57,9 @@ POST /users/login
 		{
 			"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkcmlhbm9ub2JyZWdhMjasdsdsdasdsaddsFsdsSFDFF"
 		}
-#####passar e-mail ou senha incorretos.
+passar e-mail ou senha incorretos.
 400:Bad Request
+
 	{
 		"message": "Wrong email/password"
 	}
