@@ -16,12 +16,12 @@ POST /users
 
 ### Exemplo de requisição:
 
-{
-	"name":"Adriano Nóbrega",
-	"email":"adrianonobrega26@gmail.com",
-	"password":"1234",
-	"phone":"83 998458056"
-}
+	{
+		"name":"Adriano Nóbrega",
+		"email":"adrianonobrega26@gmail.com",
+		"password":"1234",
+		"phone":"83 998458056"
+	}
 
 ### Exemplo de resposta:
 201:Created
