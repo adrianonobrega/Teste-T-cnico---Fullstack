@@ -25,6 +25,7 @@ POST /users
 
 ### Exemplo de resposta:
 201:Created
+
 	{
 		"name": "Adriano Nóbrega",
 		"email": "adrianonobregsa26@gmail.com",
@@ -32,6 +33,7 @@ POST /users
 	}
 #####passar e-mail que ja existe.
 400:Bad Request
+
 	{
 		"message": "Email already exists"
 	}
