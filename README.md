@@ -25,16 +25,16 @@ POST /users
 
 ### Exemplo de resposta:
 201:Created
-{
-	"name": "Adriano Nóbrega",
-	"email": "adrianonobregsa26@gmail.com",
-	"phone": "83 996408016"
-}
+	{
+		"name": "Adriano Nóbrega",
+		"email": "adrianonobregsa26@gmail.com",
+		"phone": "83 996408016"
+	}
 #####passar e-mail que ja existe.
 400:Bad Request
-{
-	"message": "Email already exists"
-}
+	{
+		"message": "Email already exists"
+	}
 
 
 ## LOGIN DE USUARIO
@@ -45,20 +45,20 @@ POST /users/login
 
 ### Exemplo de requisição:
 
-{
-	"email":"adrianonobrega26@gmail.com",
-	"password":"1234"
-}
+	{
+		"email":"adrianonobrega26@gmail.com",
+		"password":"1234"
+	}
 
 ### Exemplo de resposta:
 200:OK
-{
-	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkcmlhbm9ub2JyZWdhMjZAZ21haWwuY29tIiwiaWF0IjoxNjYzNjE4Mzg0LCJleHAiOjE2NjM3MDQ3ODR9.ZQ78GMpe2a9HPRNEhwnRE5MQGid-cv0bo8CljOtMOBA"
-}
+	{
+		"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkcmlhbm9ub2JyZWdhMjZAZ21haWwuY29tIiwiaWF0IjoxNjYzNjE4Mzg0LCJleHAiOjE2NjM3MDQ3ODR9.ZQ78GMpe2a9HPRNEhwnRE5MQGid-cv0bo8CljOtMOBA"
+	}
 #####passar e-mail ou senha incorretos.
 400:Bad Request
-{
-	"message": "Wrong email/password"
-}
+	{
+		"message": "Wrong email/password"
+	}
 
 # ROTAS AUTENTICADAS
