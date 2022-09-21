@@ -1,19 +1,41 @@
 import { AppDataSource } from "../../database"
 import { Contact } from "../../entities/contact.entity"
+import { User } from "../../entities/user.entity"
 
 export const contactOneListService = async (id:string) => {
 
+    console.log(id,"dsdasdasdsad")
     const contactRepository = AppDataSource.getRepository(Contact)
+    const userRepo = AppDataSource.getRepository(User)
 
-    const contact = await contactRepository.findOne({
+    const user = await userRepo.findOne({
         where: {
             id:id
         }
     })
 
-    if(!contact){
-        throw new Error("Contact not found")
+    if(!user){
+        throw new Error("User not found")
     }
     
-    return contact
+   const contacts = await contactRepository.find()
+
+   const contactOne = contacts.filter((item) => item.user.id === id)
+
+   const contact = contactOne.map((item) => {
+        const obj = {
+            id: item.id,
+            name: item.name,
+            email: item.email,
+            phone: item.phone,
+            user: {
+                id:item.user.id,
+                name:item.user.name
+            },
+            created_at:item.created_at,
+            updated_at:item.updated_at
+        }
+        return obj    
+   })
+   return contact    
 }

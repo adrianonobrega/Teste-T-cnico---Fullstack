@@ -1,6 +1,7 @@
 import { AppDataSource } from "../../database"
 import { User } from "../../entities/user.entity"
 import { updateUser } from "../../interfaces/user"
+import bcrypt from "bcrypt"
 
 export const userUpdateService = async ({id,email,phone,password}: updateUser) => {
 
@@ -20,10 +21,14 @@ export const userUpdateService = async ({id,email,phone,password}: updateUser) =
     user.id = user.id
     user.email = email || user.email
     user.phone = phone || user.phone
-    user.password = password || user.password
+    user.password = user.password = bcrypt.hashSync(password,10) || user.password
+
+    const result = {
+        email: user.email,
+        phone: user.phone
+    }
    
     await userRepository.createQueryBuilder().update(user).set(user).where("id = :id", {id: id}).execute()
 
-    return user
-
+    return result
 }

@@ -13,3 +13,8 @@ export interface creContact extends createContact{
     create_at:Date
     update_at:Date
 }
+
+export interface listOneContact{
+    user_id : string
+    contact_id :string
+}

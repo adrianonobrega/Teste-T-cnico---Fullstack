@@ -9,7 +9,7 @@ import { authUser } from "../middlewares/authUser.middleware";
 
 export const userRoutes = Router()
 
-userRoutes.post("/",authUser,userCreateController)
+userRoutes.post("/",userCreateController)
 userRoutes.post("/login",userLoginController)
 userRoutes.get("/",authUser,userListController)
 userRoutes.patch("/:id",authUser,userUpdateController)

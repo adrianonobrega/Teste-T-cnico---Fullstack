@@ -21,7 +21,7 @@ export class Contact{
     @UpdateDateColumn()
     updated_at: Date
 
-    @ManyToOne(() => User, user => user.contact,{eager: true})
+    @ManyToOne(() => User, user => user.contact,{eager: true,onDelete:'CASCADE'})
     user: User
   
 }
