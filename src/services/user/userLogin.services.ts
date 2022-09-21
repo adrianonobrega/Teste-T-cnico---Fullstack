@@ -8,7 +8,7 @@ export const userLoginServices = async({email,password}: userLogin) => {
     const userRepository = AppDataSource.getRepository(User)
     const users = await userRepository.find()
 
-    const account = users.find((user) => user.email ===email)
+    const account = users.find((user) => user.email === email)
 
     if(!account){
         throw new Error("Wrong email/password")

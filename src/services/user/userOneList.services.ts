@@ -15,5 +15,14 @@ export const userOneListService = async (id:string) => {
         throw new Error("User not found")
     }
     
-    return users
+    const result = {
+        id:users.id,
+        name: users.name,
+        email: users.email,
+        phone: users.phone,
+        created_at: users.created_at,
+        updated_at:users.updated_at
+    }
+        
+    return result
 }

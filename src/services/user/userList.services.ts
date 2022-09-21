@@ -1,15 +1,29 @@
 import { AppDataSource } from "../../database"
 import { User } from "../../entities/user.entity"
+import { Contact } from "../../entities/contact.entity"
+import { UseContainerOptions } from "typeorm"
 
 export const userListService = async () => {
 
     const userRepository = AppDataSource.getRepository(User)
 
-    const users = userRepository.find()
+    const users = await userRepository.find()
 
     if(!users){
         throw new Error("Email already exists")
       }
 
-    return users
+   const user = users.map((user) => {
+    const obj = {
+      id:user.id,
+      name: user.name,
+      email: user.email,
+      phone: user.phone,
+      created_at: user.created_at,
+      updated_at:user.updated_at
+    }
+    return obj
+   })
+
+    return user
 }
