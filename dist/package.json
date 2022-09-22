@@ -1,0 +1,43 @@
+{
+  "name": "api-teste-tecnico-fullstack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:adrianonobrega/api-Teste-Tecnico-Fullstack.git",
+  "author": "adrianonobrega <adrianonobrega26@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev src/app.ts",
+    "typeorm": "typeorm-ts-node-commonjs",
+    "test": "NODE_ENV=test jest",
+    "start":"node dist/src/app.js",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/express": "^4.17.14",
+    "@types/jest": "^29.0.3",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.7.18",
+    "@types/supertest": "^2.0.12",
+    "@types/uuid": "^8.3.4",
+    "jest": "^29.0.3",
+    "sqlite3": "^5.1.1",
+    "supertest": "^6.2.4",
+    "ts-jest": "^29.0.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.8.3"
+  },
+  "dependencies": {
+    "@jest/globals": "^29.0.3",
+    "@types/dotenv": "^8.2.0",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.8.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.9",
+    "uuid": "^9.0.0"
+  }
+}
