@@ -109,9 +109,9 @@ const userCreateController = async (req: Request, res: Response) => {
               
                const {email,password} = req.body
            
-           const contact = await userLoginServices({email,password})
+           const token = await userLoginServices({email,password})
        
-           res.status(201).json(contact)
+           res.status(201).json(token)
            }
        
         catch(error){
