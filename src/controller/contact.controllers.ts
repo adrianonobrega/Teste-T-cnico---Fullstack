@@ -9,10 +9,10 @@ const contactCreateController = async (req: Request, res: Response) => {
     
     try{
    
-           const {id} = req.params
+           const {user_id} = req.params
            const {email,phone,name} = req.body
        
-       const contact = await contactCreateServices({id,email,phone,name})
+       const contact = await contactCreateServices({user_id,email,phone,name})
    
        res.status(201).json(contact)
        }
@@ -46,9 +46,9 @@ const contactCreateController = async (req: Request, res: Response) => {
    
    const contactListOneController = async (req: Request, res: Response) => {
    
-       const {id} = req.params
+       const {user_id} = req.params
        try{
-        const contact = await contactOneListService(id)
+        const contact = await contactOneListService(user_id)
     
         res.status(200).json(contact)
        }

@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.contactRoutes = void 0;
+var express_1 = require("express");
+var contact_controllers_1 = require("../controller/contact.controllers");
+var contact_controllers_2 = require("../controller/contact.controllers");
+var contact_controllers_3 = require("../controller/contact.controllers");
+var contact_controllers_4 = require("../controller/contact.controllers");
+var contact_controllers_5 = require("../controller/contact.controllers");
+var authUser_middleware_1 = require("../middlewares/authUser.middleware");
+exports.contactRoutes = (0, express_1.Router)();
+exports.contactRoutes.post("/:id", authUser_middleware_1.authUser, contact_controllers_1.contactCreateController);
+exports.contactRoutes.get("/", authUser_middleware_1.authUser, contact_controllers_2.contactListController);
+exports.contactRoutes.patch("/:id", authUser_middleware_1.authUser, contact_controllers_4.contactUpdateController);
+exports.contactRoutes.delete("/:id", authUser_middleware_1.authUser, contact_controllers_5.contactDeleteController);
+exports.contactRoutes.get("/:id", authUser_middleware_1.authUser, contact_controllers_3.contactListOneController);

@@ -5,7 +5,7 @@ import { userListOneController } from "../controller/user.controllers";
 import { userUpdateController } from "../controller/user.controllers";
 import { userDeleteController } from "../controller/user.controllers";
 import { userLoginController} from "../controller/user.controllers";
-import { authUser } from "../middlewares/authUser.middleware";
+import  {authUser}  from "../middlewares/authUser.middleware";
 
 export const userRoutes = Router()
 
