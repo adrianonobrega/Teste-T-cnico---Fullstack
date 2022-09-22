@@ -1,9 +1,8 @@
 import { AppDataSource } from "../../database"
-import { User } from "../../entities/user.entity"
-import { createContact } from "../../interfaces/contact"
+import { updateContact } from "../../interfaces/contact"
 import { Contact } from "../../entities/contact.entity"
 
-export const contactUpdateService = async ({id,email,phone,name}: createContact) => {
+export const contactUpdateService = async ({id,email,phone,name}: updateContact) => {
 
     const contactRepository = AppDataSource.getRepository(Contact) 
 

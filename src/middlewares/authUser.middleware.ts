@@ -1,5 +1,6 @@
 import { Request,Response, NextFunction } from "express";
 import jwt from "jsonwebtoken"
+import "dotenv/config"
     
     export const authUser = (req: Request, res: Response, next: NextFunction) => {
         try {
@@ -11,6 +12,7 @@ import jwt from "jsonwebtoken"
               (err: any, decoded: any) => {
                 
                 req.userEmail = decoded.email
+                // req.userEmail = decoded.email
                 next()
             })
     

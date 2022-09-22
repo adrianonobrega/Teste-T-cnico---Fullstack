@@ -3,14 +3,14 @@ import { AppDataSource } from "../../database";
 import { Contact } from "../../entities/contact.entity";
 import { User } from "../../entities/user.entity";
 
-export const contactCreateServices = async ({id,email,phone,name}: createContact) => {
+export const contactCreateServices = async ({user_id,email,phone,name}: createContact) => {
 
     const contactRepository = AppDataSource.getRepository(Contact)
     const userRepository = AppDataSource.getRepository(User)
 
     const user = await userRepository.findOne({
         where: {
-            id:id
+            id:user_id
         }
     })
 

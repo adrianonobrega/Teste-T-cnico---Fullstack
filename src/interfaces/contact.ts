@@ -1,7 +1,7 @@
 import { User } from "../entities/user.entity"
 
 export interface createContact{
-    id:string
+    user_id:string
     name:string
     email: string
     phone: string
@@ -17,4 +17,11 @@ export interface creContact extends createContact{
 export interface listOneContact{
     user_id : string
     contact_id :string
+}
+
+export interface updateContact{
+    id:string
+    name:string
+    email: string
+    phone: string
 }

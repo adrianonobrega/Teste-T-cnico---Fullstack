@@ -2,15 +2,14 @@ import { AppDataSource } from "../../database"
 import { Contact } from "../../entities/contact.entity"
 import { User } from "../../entities/user.entity"
 
-export const contactOneListService = async (id:string) => {
+export const contactOneListService = async (user_id:string) => {
 
-    console.log(id,"dsdasdasdsad")
     const contactRepository = AppDataSource.getRepository(Contact)
     const userRepo = AppDataSource.getRepository(User)
 
     const user = await userRepo.findOne({
         where: {
-            id:id
+            id:user_id
         }
     })
 
@@ -20,7 +19,7 @@ export const contactOneListService = async (id:string) => {
     
    const contacts = await contactRepository.find()
 
-   const contactOne = contacts.filter((item) => item.user.id === id)
+   const contactOne = contacts.filter((item) => item.user.id === user_id)
 
    const contact = contactOne.map((item) => {
         const obj = {
