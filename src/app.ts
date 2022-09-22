@@ -17,6 +17,6 @@ AppDataSource.initialize()
     })
 
 
-app.listen(3000,() => console.log("rodando liso"))
+app.listen( process.env.PORT || 3000,() => console.log("rodando liso"))
 
 export default app

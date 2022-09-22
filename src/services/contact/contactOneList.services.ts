@@ -16,12 +16,13 @@ export const contactOneListService = async (user_id:string) => {
     if(!user){
         throw new Error("User not found")
     }
-    
+   
    const contacts = await contactRepository.find()
 
-   const contactOne = contacts.filter((item) => item.user.id === user_id)
+   const contactOne = contacts.filter((item) => item.user.id === user.id)
 
    const contact = contactOne.map((item) => {
+        console.log(item,"itemjsaldfjsdhsahds")
         const obj = {
             id: item.id,
             name: item.name,
@@ -36,5 +37,6 @@ export const contactOneListService = async (user_id:string) => {
         }
         return obj    
    })
-   return contact    
+  return contact
+   
 }

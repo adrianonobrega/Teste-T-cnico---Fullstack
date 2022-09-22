@@ -7,8 +7,10 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev src/app.ts",
+    "build":"tsc",
     "typeorm": "typeorm-ts-node-commonjs",
-    "test": "NODE_ENV=test jest"
+    "test": "NODE_ENV=test jest",
+    "start":"node dist/src/database"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
