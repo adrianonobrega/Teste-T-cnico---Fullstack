@@ -16,5 +16,5 @@ database_1.AppDataSource.initialize()
     .catch(function (err) {
     console.error("Error during Data Source initialization", err);
 });
-app.listen(3000, function () { return console.log("rodando liso"); });
+app.listen(process.env.PORT || 3000, function () { return console.log("rodando liso"); });
 exports.default = app;
