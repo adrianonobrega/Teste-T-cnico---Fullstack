@@ -6,19 +6,23 @@ import jwt from "jsonwebtoken"
 
 export const userLoginServices = async({email,password}: userLogin) => {
     const userRepository = AppDataSource.getRepository(User)
+
     const users = await userRepository.find()
 
-    const account = users.find((user) => user.email === email)
+    const user = users.find((user) => user.email === email)
 
-    if(!account){
+    if(!user){
         throw new Error("Wrong email/password")
     }
 
-    if(!bcrypt.compareSync(password,account.password)){
+    if(!bcrypt.compareSync(password,user.password)){
         throw new Error("Wrong email/password")
     }
 
+   
     const token = {
+       
+        user_id : user.id,
         token:  jwt.sign(
             {email:email},
             String(process.env.JWT_SECRET),

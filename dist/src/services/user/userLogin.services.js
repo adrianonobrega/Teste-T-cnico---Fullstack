@@ -47,7 +47,7 @@ var jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 var userLoginServices = function (_a) {
     var email = _a.email, password = _a.password;
     return __awaiter(void 0, void 0, void 0, function () {
-        var userRepository, users, account, token;
+        var userRepository, users, user, token;
         return __generator(this, function (_b) {
             switch (_b.label) {
                 case 0:
@@ -55,14 +55,15 @@ var userLoginServices = function (_a) {
                     return [4 /*yield*/, userRepository.find()];
                 case 1:
                     users = _b.sent();
-                    account = users.find(function (user) { return user.email === email; });
-                    if (!account) {
+                    user = users.find(function (user) { return user.email === email; });
+                    if (!user) {
                         throw new Error("Wrong email/password");
                     }
-                    if (!bcrypt_1.default.compareSync(password, account.password)) {
+                    if (!bcrypt_1.default.compareSync(password, user.password)) {
                         throw new Error("Wrong email/password");
                     }
                     token = {
+                        user_id: user.id,
                         token: jsonwebtoken_1.default.sign({ email: email }, String(process.env.JWT_SECRET), { expiresIn: '1d' })
                     };
                     return [2 /*return*/, token];
