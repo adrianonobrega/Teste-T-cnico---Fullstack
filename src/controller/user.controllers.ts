@@ -72,7 +72,7 @@ const userCreateController = async (req: Request, res: Response) => {
           
           const newUser = await userUpdateService({id,email,phone,password})
       
-          res.status(201).json(newUser)
+          res.status(200).json(newUser)
           }
       
        catch(error){

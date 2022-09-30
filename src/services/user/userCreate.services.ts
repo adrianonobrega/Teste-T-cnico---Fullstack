@@ -10,7 +10,6 @@ export const userCreateServices = async ({name, email,phone,password}: createUse
     const contactRepository = AppDataSource.getRepository(Contact)
 
     const users = await userRepository.find()
-    const contacts = await contactRepository.find()
 
     const alreadyExistsEmail = users.find((user) => user.email === email)
  
@@ -39,12 +38,12 @@ export const userCreateServices = async ({name, email,phone,password}: createUse
     await userRepository.save(user)
     await contactRepository.save(contact)
 
-   const result = {
-    id:user.id,
-    name: user.name,
-    email: user.email,
-    phone: user.phone,
-    created_at: user.created_at
+    const result = {
+      id:user.id,
+      name: user.name,
+      email: user.email,
+      phone: user.phone,
+      created_at: user.created_at
    }
    
  return result

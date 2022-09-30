@@ -51,7 +51,7 @@ export const contactCreateServices = async ({user_id,email,phone,name}: createCo
           updated_at: user.updated_at
         },
         created_at:contact.created_at,
-        updated_at: contact.updated_at
+        
       }
 
       

@@ -7,32 +7,31 @@ import { contactDeleteService } from "../services/contact/contactDelete.services
 
 const contactCreateController = async (req: Request, res: Response) => {
     
-    try{
-   
-           const {user_id} = req.params
-           const {email,phone,name} = req.body
+    try {
+            const {user_id} = req.params
+            const {email,phone,name} = req.body
        
-       const contact = await contactCreateServices({user_id,email,phone,name})
+            const contact = await contactCreateServices({user_id,email,phone,name})
    
-       res.status(201).json(contact)
-       }
+            res.status(201).json(contact)
+        }
    
     catch(error){
        if(error instanceof Error){
            return res.status(400).json({
                message: error.message
-               })
-           }
-       }
-   }
+            })
+        }
+    }
+}
    
 
    const contactListController = async (req: Request, res: Response) => {
    
       try{
-       const contact = await contactListService()
+        const contact = await contactListService()
    
-       res.status(200).json(contact)
+        res.status(200).json(contact)
       }
    
        catch(error){
@@ -46,9 +45,9 @@ const contactCreateController = async (req: Request, res: Response) => {
    
    const contactListOneController = async (req: Request, res: Response) => {
    
-       const {user_id} = req.params
+       const {id} = req.params
        try{
-        const contact = await contactOneListService(user_id)
+        const contact = await contactOneListService(id)
     
         res.status(200).json(contact)
        }
@@ -71,7 +70,7 @@ const contactCreateController = async (req: Request, res: Response) => {
           
           const contact = await contactUpdateService({id,email,phone,name})
       
-          res.status(201).json(contact)
+          res.status(200).json(contact)
           }
       
        catch(error){
