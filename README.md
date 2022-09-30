@@ -205,7 +205,7 @@ OBS: id do usuario cadastrado.
 	}
 	
 ## LISTAR TODOS OS CONTATOS
-GET /contacts/ 
+GET /contacts/ <br>
 
 ### Exemplo de resposta:
 200:OK
@@ -239,7 +239,7 @@ GET /contacts/
 	
 
 ## LISTAR TODOS OS CONTATOS REFERENTE AO USUARIO
-GET /contacts/:id
+GET /contacts/:id <br>
 OBS: id do usuario cadastrado.
 
 		[
@@ -258,7 +258,7 @@ OBS: id do usuario cadastrado.
 			]
 
 ## ATUALIZAR CONTATO
-PATCH /contacts/:id
+PATCH /contacts/:id <br>
 OBS: id do cadastro.
 
 ### Exemplo de requisição:
@@ -279,5 +279,5 @@ OBS: id do cadastro.
 		} 
 		
 ## DELETAR CONTATO
-DELETE /contacts/:id
+DELETE /contacts/:id <br>
 200:OK
