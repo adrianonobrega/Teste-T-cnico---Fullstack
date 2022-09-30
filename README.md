@@ -172,3 +172,109 @@ OBS: id do usuario cadastrado.
 
 200:OK
 
+## CADASTRAR CONTATO
+POST /contacts/:id <br>
+OBS: id do usuario cadastrado.
+
+### Exemplo de requisição:
+
+	{
+		"name":"jose",
+		"email":"jose@gmail.com",
+		"phone":"21 3342-1341"
+	}
+
+### Exemplo de resposta:
+201:Created
+
+	{
+		"id": "ccb6e32e-0a52-4b5f-80d1-d7cade2de580",
+		"name": "jose",
+		"email": "jose@gmail.com",
+		"phone": "21 3343-1341",
+		"user": {
+		"id": "6ef34565-2822-40a8-b002-e88247b3d8a0",
+		"name": "Adriano Nóbrega",
+		"created_at": "2022-09-30T14:40:21.685Z",
+		"updated_at": "2022-09-30T14:47:59.385Z"
+	},
+		"created_at": "2022-09-30T15:43:15.707Z"
+	}
+	
+## LISTAR TODOS OS CONTATOS
+GET /contacts/ 
+
+### Exemplo de resposta:
+200:OK
+
+	[
+	{
+		"id": "4a8533d8-95a5-4446-b7bf-72467a8d91cb",
+		"name": "Adriano Nóbrega",
+		"email": "adrianonobrega26@gmail.com",
+		"phone": "83 998458056",
+		"user": {
+			"id": "6ef34565-2822-40a8-b002-e88247b3d8a0",
+			"name": "Adriano Nóbrega"
+		},
+		"created_at": "2022-09-30T14:40:21.731Z",
+		"updated_at": "2022-09-30T14:40:21.731Z"
+	},
+	{
+		"id": "6d404b9e-b63c-4259-a71a-c620cbe32aa1",
+		"name": "jose",
+		"email": "jozsedsssdsdsdsddsd@gmail.com",
+		"phone": "21 22d4dsd6sdsdsdd-1341",
+		"user": {
+			"id": "6ef34565-2822-40a8-b002-e88247b3d8a0",
+			"name": "Adriano Nóbrega"
+		},
+		"created_at": "2022-09-30T15:42:45.217Z",
+		"updated_at": "2022-09-30T15:42:45.217Z"
+	}
+	]
+	
+
+## LISTAR TODOS OS CONTATOS REFERENTE AO USUARIO
+GET /contacts/:id
+OBS: id do usuario cadastrado.
+
+		[
+			{
+				"id": "2cef5467-af62-4da0-b06b-ffe0c4cc3180",
+				"name": "abcd",
+				"email": "abcdsass@gmasil.com",
+				"phone": "83 9956 45s08016",
+				"user": {
+					"id": "949f80e5-fe3a-4966-8090-e9074d4be0e1",
+					"name": "abcd"
+				},
+				"created_at": "2022-09-22T18:45:49.361Z",
+				"updated_at": "2022-09-22T18:45:49.361Z"
+			},
+			]
+
+## ATUALIZAR CONTATO
+PATCH /contacts/:id
+OBS: id do cadastro.
+
+### Exemplo de requisição:
+200:OK
+
+		{
+			"name":"Adriano",
+			"email":"adriano007@gmail.com",
+			"phone":"83 996408016"
+		} 
+
+### Exemplo de resposta:
+
+		{
+			"name":"Adriano",
+			"email":"adriano007@gmail.com",
+			"phone":"83 996408016"
+		} 
+		
+## DELETAR CONTATO
+DELETE /contacts/:id
+200:OK
