@@ -21,20 +21,30 @@
   ## USUARIO QUE NÃO EXISTE
   
   400:Bad Request
+  
   	{
+	
 		"message": "User not found"
+		
 	}
 	
  ## CONTATO QUE NÃO EXISTE	
  400:Bad Request
+ 
   	{
+	
 	"message": "User not found"
+	
 	}
+	
 	
 ## EMAIL JA ESTA CADASTRADO POR ALGUM USUARIO
 400:Bad Request
+
   	{
+	
 	"message": "Email already exists"
+	
 	}
 	
 ## EMAIL OU SENHA PASSADOS INCORRETAMENTE NO LOGIN
