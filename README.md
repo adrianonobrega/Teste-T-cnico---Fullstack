@@ -12,14 +12,16 @@
   ## TOKEN INVALIDO OU SE NÃO PASSAR O TOKEN
   401:Unauthorized
   	{
+	
 	"message": "Invalid Token"
+	
 	}
 	
   ## USUARIO QUE NÃO EXISTE
   
   400:Bad Request
   	{
-	"message": "User not found"
+		"message": "User not found"
 	}
 	
  ## CONTATO QUE NÃO EXISTE	
