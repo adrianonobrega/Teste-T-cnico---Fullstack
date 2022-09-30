@@ -11,6 +11,7 @@
   
   ## TOKEN INVALIDO OU SE NÃO PASSAR O TOKEN
   401:Unauthorized
+  
   	{
 	
 	"message": "Invalid Token"
