@@ -33,7 +33,7 @@
  
   	{
 	
-	"message": "User not found"
+	"message": "Contact not found"
 	
 	}
 	
