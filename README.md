@@ -280,4 +280,5 @@ OBS: id do cadastro.
 		
 ## DELETAR CONTATO
 DELETE /contacts/:id <br>
+OBS: id do cadastro. <br>
 200:OK
