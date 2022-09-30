@@ -49,8 +49,11 @@
 	
 ## EMAIL OU SENHA PASSADOS INCORRETAMENTE NO LOGIN
 400:Bad Request
+
   	{
+	
 		"message": "Wrong email/password"
+		
 	}
 
 # ROTAS NÃO AUTENTICADAS
