@@ -173,7 +173,7 @@ var userDeleteController = function (req, res) { return __awaiter(void 0, void 0
 }); };
 exports.userDeleteController = userDeleteController;
 var userLoginController = function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-    var _a, email, password, contact, error_6;
+    var _a, email, password, token, error_6;
     return __generator(this, function (_b) {
         switch (_b.label) {
             case 0:
@@ -181,8 +181,8 @@ var userLoginController = function (req, res) { return __awaiter(void 0, void 0,
                 _a = req.body, email = _a.email, password = _a.password;
                 return [4 /*yield*/, (0, userLogin_services_1.userLoginServices)({ email: email, password: password })];
             case 1:
-                contact = _b.sent();
-                res.status(201).json(contact);
+                token = _b.sent();
+                res.status(201).json(token);
                 return [3 /*break*/, 3];
             case 2:
                 error_6 = _b.sent();
