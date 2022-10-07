@@ -6,7 +6,7 @@
   
    # RODAR O PROJETO
    	yarn typeorm migration:run -d src/database --> rodar as migrações 
-	yarn dev
+	yarn dev --> rodar o projeto
 	
   
   # POSSIVEIS ERROS
