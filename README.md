@@ -5,7 +5,9 @@
   Criar um cadastro de clientes que poderá conter muitos contatos associados.
   
    # RODAR O PROJETO
-   	yarn dev
+   	yarn typeorm migration:run -d src/database --> rodar as migrações 
+	yarn dev
+	
   
   # POSSIVEIS ERROS
   
