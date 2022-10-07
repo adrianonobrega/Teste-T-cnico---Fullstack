@@ -36,12 +36,12 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createTables1663872306835 = void 0;
-var createTables1663872306835 = /** @class */ (function () {
-    function createTables1663872306835() {
-        this.name = 'createTables1663872306835';
+exports.createUser1665147851130 = void 0;
+var createUser1665147851130 = /** @class */ (function () {
+    function createUser1665147851130() {
+        this.name = 'createUser1665147851130';
     }
-    createTables1663872306835.prototype.up = function (queryRunner) {
+    createUser1665147851130.prototype.up = function (queryRunner) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -59,7 +59,7 @@ var createTables1663872306835 = /** @class */ (function () {
             });
         });
     };
-    createTables1663872306835.prototype.down = function (queryRunner) {
+    createUser1665147851130.prototype.down = function (queryRunner) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -77,6 +77,6 @@ var createTables1663872306835 = /** @class */ (function () {
             });
         });
     };
-    return createTables1663872306835;
+    return createUser1665147851130;
 }());
-exports.createTables1663872306835 = createTables1663872306835;
+exports.createUser1665147851130 = createUser1665147851130;
