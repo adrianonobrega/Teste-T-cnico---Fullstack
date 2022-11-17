@@ -11,7 +11,7 @@ exports.AppDataSource = new typeorm_1.DataSource(process.env.NODE_ENV === "test"
 } :
     {
         type: "postgres",
-        url: process.env.DB_URI,
+        url: process.env.DATABASE_URL,
         ssl: process.env.NODE_ENV === "production" ? { rejectUnauthorized: false } : false,
         synchronize: false,
         logging: true,

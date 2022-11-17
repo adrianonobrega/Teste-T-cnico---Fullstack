@@ -36,12 +36,12 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createUserAndContact1668192311304 = void 0;
-var createUserAndContact1668192311304 = /** @class */ (function () {
-    function createUserAndContact1668192311304() {
-        this.name = 'createUserAndContact1668192311304';
+exports.generate1668664199374 = void 0;
+var generate1668664199374 = /** @class */ (function () {
+    function generate1668664199374() {
+        this.name = 'generate1668664199374';
     }
-    createUserAndContact1668192311304.prototype.up = function (queryRunner) {
+    generate1668664199374.prototype.up = function (queryRunner) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -59,7 +59,7 @@ var createUserAndContact1668192311304 = /** @class */ (function () {
             });
         });
     };
-    createUserAndContact1668192311304.prototype.down = function (queryRunner) {
+    generate1668664199374.prototype.down = function (queryRunner) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -77,6 +77,6 @@ var createUserAndContact1668192311304 = /** @class */ (function () {
             });
         });
     };
-    return createUserAndContact1668192311304;
+    return generate1668664199374;
 }());
-exports.createUserAndContact1668192311304 = createUserAndContact1668192311304;
+exports.generate1668664199374 = generate1668664199374;
