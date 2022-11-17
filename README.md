@@ -8,8 +8,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
   Esta aplicação consiste em uma agenda, onde o usuario pode cadastrar o contado da pessoa.
 ## Preenchendo o .env
   Dentro do repositório vai ter um arquivo chamado de .env.example,copia tudo que tem dentro dele, agora crie um arquivo chamado de .env e preencha com as informações do seu banco criado no postgresql. <br/>
-        DATABASE_URL="postgres://user:password@localhost:port/db"
-        JWT_SECRET=
+                  DATABASE_URL="postgres://user:password@localhost:port/db"
+                  JWT_SECRET=
         
 
 ## 🛠 Instalação
