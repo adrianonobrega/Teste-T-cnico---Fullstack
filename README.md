@@ -1,5 +1,5 @@
-<h1 align:"center"> 🚀 Tecnologias<h1/>
-<p align:"center">Esse projeto foi desenvolvido com as seguintes tecnologias:<p/> <br/>
+<h1> 🚀 Tecnologias<h1/>
+<p >Esse projeto foi desenvolvido com as seguintes tecnologias:<p/> <br/>
 <ul>
   <li>Typescript<li/>
   <ul/>
