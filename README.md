@@ -1,4 +1,4 @@
-<h1>Rodando o projeto<h1/>
+<h1><i>Rodando o projeto<i><h1/>
 
 <h4>1 - Clone este repositório<h4/>
 
