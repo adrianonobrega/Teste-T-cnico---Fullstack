@@ -22,6 +22,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 <h4> ▶️ Execute a aplicação em modo de desenvolvimento<h4/>
 <h6>$ yarn dev<h6/>
 
-<h4> 🤖 O servidor iniciará na porta:9000 - acesse <http://localhost:9000><h4/>
+<h4> 🤖 O servidor iniciará na porta:9000 - acesse http://localhost:9000<h4/>
 
   
