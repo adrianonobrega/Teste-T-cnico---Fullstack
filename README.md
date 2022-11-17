@@ -27,6 +27,9 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
   ## Deploy
   ⬆️ https://api-contact-deploy.herokuapp.com/
   
+  ## Tests
+  https://icons8.com/icon/12764/trial
+  
   ## 📃 Documentação
   
   <a href="http://localhost:9000/api-docs/">http://localhost:9000/api-docs/<a/>
