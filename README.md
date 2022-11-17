@@ -1,6 +1,6 @@
 <h1>Rodando o projeto<h1/>
 
-      # Clone este repositório
+      <h6># Clone este repositório<h6/>
 
       # Acesse a pasta do projeto
 
