@@ -11,7 +11,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 <h4># Clone este repositório<h4/>
 
-<h4> 📁 # Acesse a pasta do projeto<h4/>
+<h4> 📁 Acesse a pasta do projeto<h4/>
 
 <h4> # Instale as dependências<h4/>
 <h6>$ yarn install<h6>
