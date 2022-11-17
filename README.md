@@ -1,5 +1,5 @@
 <h1 align:"center"> 🚀 Tecnologias<h1/>
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+<p>Esse projeto foi desenvolvido com as seguintes tecnologias:<p/>
 
 
 
