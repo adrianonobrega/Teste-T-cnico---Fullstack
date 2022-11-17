@@ -1,8 +1,13 @@
 ## 🚀 Tecnologias
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Typescript
+- Typeorm
+- Swagger
 
-# 🛠️ Rodando o projeto<h1/>
+## 💻 Projeto
+  Esta aplicação consiste em uma agenda, onde o usuario pode cadastrar o contado da pessoa.
+
+## 🛠 Instalação
 
 <h4>1 - Clone este repositório<h4/>
 
