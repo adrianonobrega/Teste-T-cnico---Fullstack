@@ -1,6 +1,8 @@
 <h1 align:"center"> 🚀 Tecnologias<h1/>
 <p align:"center">Esse projeto foi desenvolvido com as seguintes tecnologias:<p/>
-
+<ul>
+  <li>Typescript<li/>
+  <ul/>
 
 
 # 🛠️ Rodando o projeto<h1/>
