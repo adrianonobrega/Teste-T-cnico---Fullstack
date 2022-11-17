@@ -1,6 +1,6 @@
 Rodando o projeto
 
-	# Clone este repositório
+	#<b> Clone este repositório<b/>
 
 	# Acesse a pasta do projeto
 
