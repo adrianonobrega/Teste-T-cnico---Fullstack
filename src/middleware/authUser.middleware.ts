@@ -12,7 +12,6 @@ import "dotenv/config"
               (err: any, decoded: any) => {
                 
                 req.userEmail = decoded.email
-                // req.userEmail = decoded.email
                 next()
             })
     

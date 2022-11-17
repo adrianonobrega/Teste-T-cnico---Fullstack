@@ -1,17 +1,21 @@
 import { Router } from "express";
-import { userCreateController } from "../controller/user.controllers";
-import { userListController } from "../controller/user.controllers";
-import { userListOneController } from "../controller/user.controllers";
-import { userUpdateController } from "../controller/user.controllers";
-import { userDeleteController } from "../controller/user.controllers";
-import { userLoginController} from "../controller/user.controllers";
-import  {authUser}  from "../middlewares/authUser.middleware";
+import { userCreateController } from "../controller/user.controller";
+import { userListController } from "../controller/user.controller";
+import { userListOneController } from "../controller/user.controller";
+import { userUpdateController } from "../controller/user.controller";
+import { userDeleteController } from "../controller/user.controller";
+import { userLoginController} from "../controller/user.controller";
+import  {authUser}  from "..//middleware/authUser.middleware";
+import { validate } from "../middleware/validatedMiddleware";
+import { userCreateSchema,userUpdateSchema,userLoginSchema } from "../schemas/userSchema";
+
+
 
 export const userRoutes = Router()
 
-userRoutes.post("/",userCreateController)
-userRoutes.post("/login",userLoginController)
+userRoutes.post("/",validate(userCreateSchema),userCreateController)
+userRoutes.post("/login",validate(userLoginSchema),userLoginController)
 userRoutes.get("/",authUser,userListController)
-userRoutes.patch("/:id",authUser,userUpdateController)
+userRoutes.patch("/:id",validate(userUpdateSchema),authUser,userUpdateController)
 userRoutes.delete("/:id",authUser,userDeleteController)
 userRoutes.get("/:id",authUser,userListOneController)

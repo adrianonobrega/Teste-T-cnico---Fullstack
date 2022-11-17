@@ -1,5 +1,3 @@
-import { User } from "../entities/user.entity"
-
 export interface createContact{
     user_id:string
     name:string
@@ -24,4 +22,10 @@ export interface updateContact{
     name:string
     email: string
     phone: string
+}
+
+export interface Contact{
+    name:string | any
+    email: string | any
+    phone: string | any
 }

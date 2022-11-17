@@ -1,10 +1,8 @@
 import { AppDataSource } from "../../database"
-import { User } from "../../entities/user.entity"
 import { Contact } from "../../entities/contact.entity"
+import AppError from "../../errors/appError"
 
 export const contactDeleteService = async (id:string) => {
-
-    
     const contactRepository = AppDataSource.getRepository(Contact)
 
     const contact = await contactRepository.findOne({
@@ -14,10 +12,8 @@ export const contactDeleteService = async (id:string) => {
     })
 
     if (!contact) {
-        throw new Error("Contact not found")
+        throw new AppError("Contact not found")
       }
-
-    
 
       await contactRepository.createQueryBuilder().delete().from(Contact).where("id = :id", { id }).execute();
 }

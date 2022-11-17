@@ -1,4 +1,3 @@
-import { Contact } from "../entities/contact.entity"
 
 export interface createUser{
     name: string 
@@ -16,12 +15,21 @@ export interface creUser extends createUser{
 
 export interface updateUser{
     id:string
+    name:string
     email:string
     phone:string
     password:string
+    
 }
 
 export interface userLogin{
-    email:string
-    password:string
+    email:string | any
+    password:string | any
+}
+
+export interface updateUser2{
+    name:string | any
+    email:string | any
+    phone:string | any
+    password:string | any
 }

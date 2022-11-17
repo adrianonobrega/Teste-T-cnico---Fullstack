@@ -1,7 +1,5 @@
 import { AppDataSource } from "../../database"
 import { User } from "../../entities/user.entity"
-import { Contact } from "../../entities/contact.entity"
-import { UseContainerOptions } from "typeorm"
 
 export const userListService = async () => {
 

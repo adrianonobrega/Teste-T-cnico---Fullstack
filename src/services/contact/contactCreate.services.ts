@@ -2,6 +2,7 @@ import { createContact } from "../../interfaces/contact";
 import { AppDataSource } from "../../database";
 import { Contact } from "../../entities/contact.entity";
 import { User } from "../../entities/user.entity";
+import AppError from "../../errors/appError";
 
 export const contactCreateServices = async ({user_id,email,phone,name}: createContact) => {
 
@@ -19,18 +20,17 @@ export const contactCreateServices = async ({user_id,email,phone,name}: createCo
     const phoneExistsEmail = contacts.find((contact) => contact.phone === phone)
 
     if(!user){
-        throw new Error("User not found")
+        throw new AppError("User not found")
       }
  
     if(alreadyExistsEmail){
-      throw new Error("Email already exists")
+      throw new AppError("Email already exists")
     }
 
     if(phoneExistsEmail){
-        throw new Error("Phone already exists")
+        throw new AppError("Phone already exists")
       }
 
-      
       const contact = new Contact()
       contact.id = contact.id
       contact.name = name
@@ -53,11 +53,5 @@ export const contactCreateServices = async ({user_id,email,phone,name}: createCo
         created_at:contact.created_at,
         updated_at: contact.updated_at
       }
-
-      
-    
-      
-      
-
       return result
 }

@@ -22,6 +22,5 @@ export const contactListService = async () => {
         }
         return obj
     })
-
     return result
 }
