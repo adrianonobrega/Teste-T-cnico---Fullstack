@@ -28,7 +28,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
   ⬆️ https://api-contact-deploy.herokuapp.com/
   
   ## Tests
-   📁 <h6>yarn test<h6/>
+    <h6> 📁 yarn test<h6/>
   
   ## 📃 Documentação
   
