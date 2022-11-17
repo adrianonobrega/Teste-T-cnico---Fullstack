@@ -11,7 +11,12 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
   
                   DATABASE_URL="postgres://user:password@localhost:port/db"
                   JWT_SECRET=
-        
+                  
+                  user = "userPostgres"
+                  password = "senhaPostgres"
+                  port = "5432"
+                  db = "nameDatabase"
+                  JWT_SECRET = "VALOR QUE VOCÊ IRA ATRIBUIR, PODE SER QUALQUER VALOR"
 
 ## 🛠 Instalação
 
