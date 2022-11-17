@@ -1,9 +1,6 @@
-<h1> 🚀 Tecnologias<h1/>
-<p >Esse projeto foi desenvolvido com as seguintes tecnologias:<p/> <br/>
-<ul>
-  <li>Typescript<li/>
-  <ul/>
-<br/>
+## 🚀 Tecnologias
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+- Typescript
 
 # 🛠️ Rodando o projeto<h1/>
 
