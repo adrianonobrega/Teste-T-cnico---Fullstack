@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.contactRoutes = void 0;
+var express_1 = require("express");
+var contact_controller_1 = require("../controller/contact.controller");
+var contact_controller_2 = require("../controller/contact.controller");
+var contact_controller_3 = require("../controller/contact.controller");
+var contact_controller_4 = require("../controller/contact.controller");
+var contact_controller_5 = require("../controller/contact.controller");
+var authUser_middleware_1 = require("../middleware/authUser.middleware");
+var validatedMiddleware_1 = require("../middleware/validatedMiddleware");
+var contactSchema_1 = require("../schemas/contactSchema");
+exports.contactRoutes = (0, express_1.Router)();
+exports.contactRoutes.post("/:user_id", (0, validatedMiddleware_1.validate)(contactSchema_1.contactSchema), authUser_middleware_1.authUser, contact_controller_1.contactCreateController);
+exports.contactRoutes.get("/", authUser_middleware_1.authUser, contact_controller_2.contactListController);
+exports.contactRoutes.patch("/:id", (0, validatedMiddleware_1.validate)(contactSchema_1.contactUpdateSchema), authUser_middleware_1.authUser, contact_controller_4.contactUpdateController);
+exports.contactRoutes.delete("/:id", authUser_middleware_1.authUser, contact_controller_5.contactDeleteController);
+exports.contactRoutes.get("/:user_id", authUser_middleware_1.authUser, contact_controller_3.contactListOneController);
